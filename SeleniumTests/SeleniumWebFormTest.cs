@@ -1,7 +1,7 @@
 namespace SeleniumTests;
 
 [TestFixture]
-class SeleniumWebFormTest
+public class SeleniumWebFormTest
 {
     IWebDriver driver;
 

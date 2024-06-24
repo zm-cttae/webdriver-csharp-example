@@ -1,6 +1,6 @@
 ﻿namespace TestData;
 
-static class SeleniumWebFormTestData
+public static class SeleniumWebFormTestData
 {
     public static string FormUrl = "https://www.selenium.dev/selenium/web/web-form.html";
     public static string FormTitle = "Web form";
