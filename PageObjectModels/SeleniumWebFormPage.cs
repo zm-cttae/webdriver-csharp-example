@@ -1,6 +1,6 @@
 ﻿namespace PageObjectModels;
 
-static public class SeleniumWebFormPage
+static class SeleniumWebFormPage
 {
     public static IWebElement Textbox(IWebDriver driver)
     {

@@ -6,17 +6,17 @@ class SeleniumWebFormTest
     IWebDriver driver;
 
     [SetUp]
-    public void preConditions()
+    public void PreConditions()
     {
         driver = new ChromeDriver();
-        driver.Url = "https://www.selenium.dev/selenium/web/web-form.html";
+        driver.Url = TestData.SeleniumWebFormTestData.FormUrl;
         driver.Manage().Window.Maximize();
     }
 
     [Test]
     public void TestTitle()
     {
-        Assert.That(driver.Title, Is.EqualTo("Web form"));
+        Assert.That(driver.Title, Is.EqualTo(TestData.SeleniumWebFormTestData.FormTitle));
     }
 
     [Test]
@@ -24,14 +24,14 @@ class SeleniumWebFormTest
     {
         IWebElement textbox = SeleniumWebFormPage.Textbox(driver);
         textbox.SendKeys("Selenium");
-        Assert.That(textbox.GetAttribute("value"), Is.EqualTo("Selenium"));
+        Assert.That(textbox.GetAttribute("value"), Is.EqualTo(TestData.SeleniumWebFormTestData.MyTextInput));
     }
 
     [Test]
     public void TestTextPassword()
     {
         IWebElement passbox = SeleniumWebFormPage.Passbox(driver);
-        Assert.That(passbox.GetAttribute("type"), Is.EqualTo("password"));
+        Assert.That(passbox.GetAttribute("type"), Is.EqualTo(TestData.SeleniumWebFormTestData.PasswordInput));
         Assert.That(passbox.GetAttribute("autocomplete"), Is.EqualTo("off"));
     }
 
@@ -41,7 +41,7 @@ class SeleniumWebFormTest
         IWebElement textarea = SeleniumWebFormPage.Textarea(driver);
         Assert.That(textarea.Enabled, Is.EqualTo(true));
         Assert.That(textarea.GetAttribute("rows"), Is.EqualTo("3"));
-        textarea.SendKeys("Selenium is a tool for automating web applications using various browsers.");
+        textarea.SendKeys(TestData.SeleniumWebFormTestData.TextAreaInput);
     }
 
     [Test]
@@ -65,12 +65,12 @@ class SeleniumWebFormTest
         IWebElement anchorIndex = SeleniumWebFormPage.AnchorIndex(driver);
 
         anchorIndex.Click();
-        Assert.That(driver.Url, Is.EqualTo("https://www.selenium.dev/selenium/web/index.html"));
-        Assert.That(driver.Title, Is.EqualTo("Index of Available Pages"));
+        Assert.That(driver.Url, Is.EqualTo(TestData.SeleniumWebFormTestData.IndexTitle));
+        Assert.That(driver.Title, Is.EqualTo(TestData.SeleniumWebFormTestData.IndexUrl));
 
         driver.Navigate().Back();
-        Assert.That(driver.Url, Is.EqualTo("https://www.selenium.dev/selenium/web/web-form.html"));
-        Assert.That(driver.Title, Is.EqualTo("Web form"));
+        Assert.That(driver.Url, Is.EqualTo(TestData.SeleniumWebFormTestData.FormUrl));
+        Assert.That(driver.Title, Is.EqualTo(TestData.SeleniumWebFormTestData.FormTitle));
     }
 
     [Test]

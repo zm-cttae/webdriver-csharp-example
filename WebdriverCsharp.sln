@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumTests", "SeleniumTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageObjectModels", "PageObjectModels\PageObjectModels.csproj", "{50375378-C837-4C93-9559-FB2AA2D81C1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestData", "TestData\TestData.csproj", "{F7ECD1C1-E31F-41C9-9506-12210757725D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{50375378-C837-4C93-9559-FB2AA2D81C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50375378-C837-4C93-9559-FB2AA2D81C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50375378-C837-4C93-9559-FB2AA2D81C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7ECD1C1-E31F-41C9-9506-12210757725D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7ECD1C1-E31F-41C9-9506-12210757725D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7ECD1C1-E31F-41C9-9506-12210757725D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7ECD1C1-E31F-41C9-9506-12210757725D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
