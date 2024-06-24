@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <Using Include="NUnit.Framework" />
-	<Using Include="OpenQA.Selenium" />
+    <Using Include="OpenQA.Selenium" />
     <Using Include="OpenQA.Selenium.Chrome" />
     <Using Include="OpenQA.Selenium.Support.UI" />
   </ItemGroup>
